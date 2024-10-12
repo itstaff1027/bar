@@ -11,7 +11,32 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     {{ __("You're logged in!") }}
                 </div>
+                
             </div>
         </div>
     </div>
+    <div class="bg-white p-6 rounded shadow-md text-center">
+        <h1 class="text-xl font-semibold mb-4">Generate QR Code</h1>
+        <input type="text" id="qrText" class="border rounded p-2 mb-4" placeholder="Enter text or URL" />
+        <button id="generate" class="bg-blue-600 text-white rounded px-4 py-2">Generate QR Code</button>
+        <div id="qrcode" class="mt-4"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#generate').click(function() {
+                const text = $('#qrText').val();
+                $('#qrcode').empty(); // Clear previous QR code
+                if (text) {
+                    $('#qrcode').qrcode({
+                        text: text,
+                        width: 128,
+                        height: 128
+                    });
+                } else {
+                    alert("Please enter a valid text or URL.");
+                }
+            });
+        });
+    </script>
 </x-app-layout>
