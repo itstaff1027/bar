@@ -51,6 +51,6 @@ class PromoterController extends Controller
             ]
         ];
         
-        return view('welcome', compact('promoters'));
+        return view('pages.promoter', compact('promoters'));
     }
 }

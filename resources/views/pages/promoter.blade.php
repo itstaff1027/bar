@@ -19,9 +19,78 @@
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
         <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-            <div class="flex flex-col justify-center items-center p-8 h-screen">
-                <h1 class="text-[100px] font-bold mb-4 text-white p-4 rounded-md">RESERVED.</h1>
-                <a class="text-[50px]" href="{{ route('promoters') }}">ENTER >>></a>
+            <div class="flex justify-center items-center p-8">
+                <h1 class="text-2xl font-bold mb-4 text-white border p-4 rounded-md">RESERVED.</h1>
+            </div>
+    
+            <div class="container mx-auto p-4 ">
+                <div class="flex justify-center items-center mb-4">
+                    <h1 class="text-2xl font-bold">Promoters</h1>
+                </div>
+    
+                <div class="flex flex-wrap justify-center gap-4 ">
+                    @foreach($promoters as $promoter)
+                        <div class="bg-white text-black p-4 rounded shadow-lg w-full max-w-xs relative">
+                            <div class="flex items-center mb-2">
+                                <div class="h-16 w-16 bg-gray-300 rounded-full mr-2"></div>
+                                <h2 class="text-xl font-semibold">{{ $promoter['name'] }}</h2>
+                            </div>
+    
+                            <x-dropdown align="top" contentClasses="overflow-y-auto h-24 bg-black">
+                                <x-slot name="trigger">
+                                    <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+                                        <div>Associates</div>
+    
+                                        <div class="ms-1">
+                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </x-slot>
+                                <x-slot name="content">
+                                    @foreach($promoter['associates'] as $associate)
+                                        <x-dropdown-link :href="route('profile.edit')">
+                                            {{ $associate['name'] }}
+                                        </x-dropdown-link>
+                                    @endforeach
+                                </x-slot>
+                            </x-dropdown>
+                        </div>
+                    @endforeach
+                </div>
+    
+                <!-- Booking Form Section -->
+                <div class="mt-16 flex justify-center">
+                    <div class="bg-white p-6 rounded shadow-lg w-full max-w-md"> <!-- Change max-w-xs to max-w-md -->
+                        <div class="flex justify-center items-center">
+                            <h2 class="text-xl font-semibold mb-4 text-black">Book Now</h2>
+                        </div>
+                        
+                        <form method="POST">
+                            @csrf
+                            <div class="mb-4">
+                                <label for="name" class="block text-sm font-medium text-gray-700">Contact Name</label>
+                                <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-sm font-medium text-gray-700">Mobile Number</label>
+                                <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50">
+                            </div>
+                            <div class="mb-4">
+                                <label for="date" class="block text-sm font-medium text-gray-700">Promoter Name</label>
+                                <input type="date" id="date" name="date" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50">
+                            </div>
+                            <div class="mb-4">
+                                <label for="date" class="block text-sm font-medium text-gray-700">Booking Date</label>
+                                <input type="date" id="date" name="date" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50">
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-150">
+                                Submit Booking
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

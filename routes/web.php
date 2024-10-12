@@ -4,10 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PromoterController;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-Route::get('/', [PromoterController::class, 'index']);
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/promoters', [PromoterController::class, 'index'])->name('promoters');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
