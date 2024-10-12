@@ -23,7 +23,7 @@
         <div class="bg-black text-white/50">
             <div class="flex flex-col justify-center items-center p-8 h-screen">
                 <!-- Responsive heading text -->
-                <h1 class="text-6xl sm:text-8xl md:text-[110px] font-bold mb-4 text-white/50 p-4 rounded-md">
+                <h1 class="text-6xl sm:text-8xl md:text-[110px] font-bold mb-4 text-white p-4 rounded-md">
                     RESERVED.
                 </h1>
                 <!-- Responsive link text -->
