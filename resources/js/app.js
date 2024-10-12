@@ -1,15 +1,8 @@
-import "./bootstrap.js";
+import Alpine from 'alpinejs';
+import focus from '@alpinejs/focus';
 
-// import Clipboard from '@ryangjchandler/alpine-clipboard.js'
-import Alpine from "alpinejs";
-// import Livewire from "livewire";
+// Register the Focus plugin
+Alpine.plugin(focus);
 
 window.Alpine = Alpine;
-Alpine.plugin(Focus);
-
-window.Livewire = Livewire;
-Livewire.start();
-
 Alpine.start();
-
-// Livewire.start()
