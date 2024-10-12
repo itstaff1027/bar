@@ -20,7 +20,7 @@
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
         <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
             <div class="flex flex-col justify-center items-center p-8 h-screen">
-                <h1 class="text-[100px] font-bold mb-4 text-white p-4 rounded-md">RESERVED.</h1>
+                <h1 class="text-[110px] font-bold mb-4 text-white p-4 rounded-md">RESERVED.</h1>
                 <a class="text-[50px]" href="{{ route('promoters') }}">ENTER >>></a>
             </div>
         </div>
