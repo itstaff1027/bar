@@ -17,15 +17,11 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
+    <body class="font-sans antialiased bg-black text-white/50">
+        <div class=" bg-black text-white/50">
             <div class="flex flex-col justify-center items-center p-8 h-screen">
-                <!-- Responsive heading text -->
-                <h1 class="text-6xl sm:text-8xl md:text-[110px] font-bold mb-4 text-white p-4 rounded-md">
-                    RESERVED.
-                </h1>
-                <!-- Responsive link text -->
-                <a class="text-4xl sm:text-5xl md:text-[50px]" href="{{ route('promoters') }}">ENTER >>></a>
+                <h1 class="text-[110px] font-bold mb-4 text-white p-4 rounded-md">RESERVED.</h1>
+                <a class="text-[50px]" href="{{ route('promoters') }}">ENTER >>></a>
             </div>
         </div>
     </body>

@@ -1580,6 +1580,9 @@ select {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-white\/50 {
+  color: rgb(255 255 255 / 0.5);
+}
 .underline {
   text-decoration-line: underline;
 }

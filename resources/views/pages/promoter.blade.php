@@ -17,8 +17,8 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
+    <body class="font-sans antialiased bg-black text-white/50">
+        <div class=" bg-black text-white/50">
             <div class="flex justify-center items-center p-8">
                 <h1 class="text-2xl font-bold mb-4 text-white border p-4 rounded-md">RESERVED.</h1>
             </div>
