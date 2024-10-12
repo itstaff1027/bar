@@ -25,7 +25,7 @@
                     RESERVED.
                 </h1>
                 <!-- Responsive link text -->
-                <a class="text-4xl sm:text-5xl md:text-[50px]" href="{{ route('promoters') }}">ENTER >>></a>
+                <a class="text-4xl sm:text-5xl md:text-[50px] text-white/50" href="{{ route('promoters') }}">ENTER >>></a>
             </div>
         </div>
     </body>
