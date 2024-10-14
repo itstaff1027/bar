@@ -69,7 +69,7 @@
                     </div>
                 </div>
 
-                <div class="flex justify-center items-center mb-4">
+                <div class="flex justify-center items-center mb-4 mt-8">
                     <h1 class="text-2xl font-bold">Promoters</h1>
                 </div>
     
@@ -104,6 +104,37 @@
                         </div>
                     @endforeach
                 </div>
+
+<!-- Team Members Container -->
+<div class="flex justify-center mt-8">
+    <div class="container">
+        <h2 class="text-2xl font-semibold text-center mb-6">Our Team</h2>
+        <!-- Desktop Grid / Mobile Horizontal Scroll -->
+        <div class="flex md:grid md:grid-cols-3 gap-8 md:gap-12 overflow-x-auto whitespace-nowrap">
+            <!-- Team Member -->
+            <div class="inline-block w-2/3 md:w-auto flex-shrink-0 md:flex-shrink text-center">
+                <img src="https://via.placeholder.com/150" alt="Team Member" class="w-24 h-24 rounded-full mb-4 object-cover shadow-lg mx-auto">
+                <h3 class="text-lg font-bold">FROILAN S. YULAY</h3>
+                <p class="text-gray-600">CHIEF OPERATIONS OFFICER (COO)</p>
+            </div>
+            <!-- Team Member -->
+            <div class="inline-block w-2/3 md:w-auto flex-shrink-0 md:flex-shrink text-center">
+                <img src="https://via.placeholder.com/150" alt="Team Member" class="w-24 h-24 rounded-full mb-4 object-cover shadow-lg mx-auto">
+                <h3 class="text-lg font-bold">CHRISTOPHER ROUCEL A. DALISAY</h3>
+                <p class="text-gray-600">CHIEF EXECUTIVE OFFICER (CEO)</p>
+            </div>
+            <!-- Team Member -->
+            <div class="inline-block w-2/3 md:w-auto flex-shrink-0 md:flex-shrink text-center">
+                <img src="https://via.placeholder.com/150" alt="Team Member" class="w-24 h-24 rounded-full mb-4 object-cover shadow-lg mx-auto">
+                <h3 class="text-lg font-bold">TIMMY G. CABAÑERO</h3>
+                <p class="text-gray-600">CHIEF FINANCIAL OFFICER (CFO)</p>
+            </div>
+            <!-- Add more team members as needed -->
+        </div>
+    </div>
+</div>
+
+                
                 <!-- Footer Section -->
                 <div class="mt-16 flex flex-col md:flex-row justify-center items-center md:items-start space-y-8 md:space-y-0 md:space-x-12">
                     <!-- Book Now Section -->
