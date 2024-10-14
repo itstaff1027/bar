@@ -22,10 +22,53 @@
     <body class="font-sans antialiased bg-black text-white/50">
         <div class=" bg-black text-white/50">
             <div class="flex justify-center items-center p-8">
-                <h1 class="text-2xl font-bold mb-4 text-white border p-4 rounded-md">RESERVED.</h1>
+                <h1 class="text-2xl font-bold mb-4 text-white border p-4 rounded-md shadow-xl  shadow-slate-400">RESERVED.</h1>
             </div>
     
             <div class="container mx-auto p-4 ">
+                
+                <div class="flex flex-col md:flex-row items-center justify-center mb-8 md:mb-12">
+                    <!-- Company Image (left on desktop, top on mobile) -->
+                    <div class="md:w-1/2 mb-4 md:mb-0">
+                        <img src="https://via.placeholder.com/800x450" alt="Company Logo" class="w-full h-auto object-cover rounded-lg shadow-lg">
+                    </div>
+                
+                    <!-- Company Text (right on desktop, below image on mobile) -->
+                    <div class="text-center md:text-left md:w-[520px] md:pl-8">
+                        <h1 class="text-3xl font-bold mb-4">Company Name</h1>
+                        <p class="text-gray-600 max-w-md">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar nunc et fringilla luctus. Proin condimentum velit vel mi ultrices, sit amet venenatis nisl vehicula. Integer malesuada erat id convallis gravida. Fusce nec libero id tortor ultricies volutpat.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex overflow-x-scroll space-x-4 pb-4">
+                    <!-- Image 1 -->
+                    <div class="flex-shrink-0 w-[350px] h-[450px]">
+                        <img src="https://via.placeholder.com/450x800" alt="Image 1" class="w-full h-full object-cover rounded-lg shadow-lg">
+                    </div>
+                
+                    <!-- Image 2 -->
+                    <div class="flex-shrink-0 w-[350px] h-[450px]">
+                        <img src="https://via.placeholder.com/450x800" alt="Image 2" class="w-full h-full object-cover rounded-lg shadow-lg">
+                    </div>
+                
+                    <!-- Image 3 -->
+                    <div class="flex-shrink-0 w-[350px] h-[450px]">
+                        <img src="https://via.placeholder.com/450x800" alt="Image 3" class="w-full h-full object-cover rounded-lg shadow-lg">
+                    </div>
+                
+                    <!-- Image 4 -->
+                    <div class="flex-shrink-0 w-[350px] h-[450px]">
+                        <img src="https://via.placeholder.com/450x800" alt="Image 4" class="w-full h-full object-cover rounded-lg shadow-lg">
+                    </div>
+                
+                    <!-- Image 5 -->
+                    <div class="flex-shrink-0 w-[350px] h-[450px]">
+                        <img src="https://via.placeholder.com/450x800" alt="Image 5" class="w-full h-full object-cover rounded-lg shadow-lg">
+                    </div>
+                </div>
+
                 <div class="flex justify-center items-center mb-4">
                     <h1 class="text-2xl font-bold">Promoters</h1>
                 </div>
@@ -61,10 +104,10 @@
                         </div>
                     @endforeach
                 </div>
-    
-                <!-- Booking Form Section -->
-                <div class="mt-16 flex justify-center">
-                    <div class="bg-white p-6 rounded shadow-lg w-full max-w-md"> <!-- Change max-w-xs to max-w-md -->
+                <!-- Footer Section -->
+                <div class="mt-16 flex flex-col md:flex-row justify-center items-center md:items-start space-y-8 md:space-y-0 md:space-x-12">
+                    <!-- Book Now Section -->
+                    <div class="bg-white p-6 rounded shadow-lg w-full max-w-md">
                         <div class="flex justify-center items-center">
                             <h2 class="text-xl font-semibold mb-4 text-black">Book Now</h2>
                         </div>
@@ -80,8 +123,8 @@
                                 <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50">
                             </div>
                             <div class="mb-4">
-                                <label for="date" class="block text-sm font-medium text-gray-700">Promoter Name</label>
-                                <input type="date" id="date" name="date" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50">
+                                <label for="promoter" class="block text-sm font-medium text-gray-700">Promoter Name</label>
+                                <input type="text" id="promoter" name="promoter" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50">
                             </div>
                             <div class="mb-4">
                                 <label for="date" class="block text-sm font-medium text-gray-700">Booking Date</label>
@@ -92,7 +135,34 @@
                             </button>
                         </form>
                     </div>
+
+                    <!-- Contact Info Section -->
+                    <div class="text-center md:text-left">
+                        <h2 class="text-xl font-semibold mb-4 text-black">Contact Information</h2>
+                        <!-- Phone Number -->
+                        <div class="mb-4">
+                            <h3 class="font-semibold">Phone Number:</h3>
+                            <p class="text-gray-700">(+63) 999 9999 999</p>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="mb-4">
+                            <h3 class="font-semibold">Reach Us:</h3>
+                            <div class="flex justify-center md:justify-start space-x-4">
+                                <a href="https://facebook.com" class="text-blue-600 hover:text-blue-800">Facebook</a>
+                                <a href="https://instagram.com" class="text-pink-600 hover:text-pink-800">Instagram</a>
+                                <a href="https://www.tiktok.com/en/" class="text-gray-900 hover:text-gray-700">TikTok</a>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div>
+                            <h3 class="font-semibold">Location:</h3>
+                            <p class="text-gray-700">Quezon City</p>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </body>
