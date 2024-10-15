@@ -30,11 +30,13 @@
                     </div>
             
                     <!-- ENTER >>> and By Corte Ibiza - Reduced space between the lines -->
-                    <div class="flex justify-between items-center w-full mt-0">
-                        <a class="text-xl sm:text-3xl md:text-[30px] text-white/50" href="{{ route('promoters') }}">ENTER >>></a>
-                        <h2 class="text-white text-xl sm:text-3xl md:text-[30px]">By Corte Ibiza</h2>
+                    <div class="flex justify-center items-center w-full mt-0">
+                        <h2 class="text-white text-xl sm:text-3xl md:text-[30px] text-right w-full">By Corte Ibiza</h2>
                     </div>
+                    <a class="p-4 text-xl sm:text-3xl md:text-[30px] text-white bg-transparent rounded-md hover:bg-white hover:text-black transform hover:scale-105 transition duration-300 ease-in-out" href="{{ route('promoters') }}">ENTER</a>
+
                 </div>
+                
             </div>
             
         </div>
