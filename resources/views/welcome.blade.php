@@ -23,11 +23,16 @@
         <div class="bg-black text-white/50">
             <div class="flex flex-col justify-center items-center p-8 h-screen">
                 <!-- Responsive heading text -->
-                <h1 class="text-6xl sm:text-8xl md:text-[110px] font-bold mb-4 text-white p-4 rounded-md">
-                    RESERVED.
-                </h1>
-                <!-- Responsive link text -->
-                <a class="text-4xl sm:text-5xl md:text-[50px] text-white/50" href="{{ route('promoters') }}">ENTER >>></a>
+                <div class="flex flex-col justify-center items-center">
+                    <h1 class="text-6xl sm:text-8xl md:text-[110px] font-bold mb-4 text-white p-4 rounded-md">
+                        RESERVED.
+                    </h1>
+                    <div class="flex justify-between w-full">
+                        <a class="text-xl sm:text-3xl md:text-[30px] text-white/50" href="{{ route('promoters') }}">ENTER >>></a>
+                        <h2 class="text-xl sm:text-3xl md:text-[30px] text-white/50">By Corte Ibiza</h2>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </body>

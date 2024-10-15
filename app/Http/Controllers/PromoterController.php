@@ -12,7 +12,8 @@ class PromoterController extends Controller
         $promoters = [
             [
                 'id' => 1,
-                'name' => 'Promoter 1',
+                'name' => 'FROILAN S. YULAY',
+                'position'=>'CHIEF OPERATIONS OFFICER (COO)',
                 'associates' => [
                     ['name' => 'Associate 1A'],
                     ['name' => 'Associate 1B']
@@ -20,33 +21,22 @@ class PromoterController extends Controller
             ],
             [
                 'id' => 2,
-                'name' => 'Promoter 2',
+                'name' => 'CHRISTOPHER ROUCEL A. DALISAY',
+                'position'=>'CHIEF EXECUTIVE OFFICER (CEO)',
                 'associates' => [
                     ['name' => 'Associate 2A'],
+                    ['name' => 'Associate 2B'],
+                    ['name' => 'Associate 2C'],
                     ['name' => 'Associate 2B'],
                     ['name' => 'Associate 2C']
                 ]
             ],
             [
                 'id' => 3,
-                'name' => 'Promoter 3',
-                'associates' => [] // No associates for this promoter
-            ],
-            [
-                'id' => 4,
-                'name' => 'Promoter 4',
+                'name' => 'TIMMY G. CABAÑERO',
+                'position'=>'CHIEF FINANCIAL OFFICER (CFO)',
                 'associates' => [
                     ['name' => 'Associate 4A']
-                ]
-            ],
-            [
-                'id' => 5,
-                'name' => 'Promoter 5',
-                'associates' => [
-                    ['name' => 'Associate 5A'],
-                    ['name' => 'Associate 5B'],
-                    ['name' => 'Associate 5C'],
-                    ['name' => 'Associate 5D']
                 ]
             ]
         ];

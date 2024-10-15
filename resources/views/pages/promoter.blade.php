@@ -41,6 +41,46 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- Team Members Container -->
+<div class="flex justify-center mt-8 mb-16">
+    <div class="container">
+        <h2 class="text-2xl font-semibold text-center mb-6">Our Team</h2>
+        <!-- Desktop Grid / Mobile Horizontal Scroll -->
+        <div class="flex h-80 md:grid md:grid-cols-3 gap-8 md:gap-12 overflow-x-auto whitespace-nowrap">
+            <!-- Team Member -->
+            @foreach ($promoters as $promoter)
+                <div class="inline-block w-2/3 md:w-auto flex-shrink-0 md:flex-shrink text-center">
+                    <img src="https://via.placeholder.com/150" alt="Team Member" class="w-24 h-24 rounded-full mb-4 object-cover shadow-lg mx-auto">
+                    <h3 class="text-lg font-bold">{{ $promoter['name'] }}</h3>
+                    <p class="text-gray-600">{{ $promoter['position'] }}</p>
+
+                    <x-dropdown align="top" contentClasses="overflow-y-auto h-24 bg-black" alignmentClasses="bg-black z-50">
+                        <x-slot name="trigger">
+                            <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+                                <div class="text-white">Promoters</div>
+
+                                <div class="ms-1">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </button>
+                        </x-slot>
+                        <x-slot name="content">
+                            @foreach($promoter['associates'] as $associate)
+                                <x-dropdown-link :href="route('profile.edit')">
+                                    {{ $associate['name'] }}
+                                </x-dropdown-link>
+                            @endforeach
+                        </x-slot>
+                    </x-dropdown>
+                </div>
+            @endforeach
+        
+        </div>
+    </div>
+</div>
                 
                 <div class="flex overflow-x-scroll space-x-4 pb-4">
                     <!-- Image 1 -->
@@ -69,11 +109,11 @@
                     </div>
                 </div>
 
-                <div class="flex justify-center items-center mb-4 mt-8">
+                {{-- <div class="flex justify-center items-center mb-4 mt-8">
                     <h1 class="text-2xl font-bold">Promoters</h1>
-                </div>
+                </div> --}}
     
-                <div class="flex flex-wrap justify-center gap-4 ">
+                {{-- <div class="flex flex-wrap justify-center gap-4 ">
                     @foreach($promoters as $promoter)
                         <div class="bg-white text-black p-4 rounded shadow-lg w-full max-w-xs relative">
                             <div class="flex items-center mb-2">
@@ -103,37 +143,7 @@
                             </x-dropdown>
                         </div>
                     @endforeach
-                </div>
-
-<!-- Team Members Container -->
-<div class="flex justify-center mt-8">
-    <div class="container">
-        <h2 class="text-2xl font-semibold text-center mb-6">Our Team</h2>
-        <!-- Desktop Grid / Mobile Horizontal Scroll -->
-        <div class="flex md:grid md:grid-cols-3 gap-8 md:gap-12 overflow-x-auto whitespace-nowrap">
-            <!-- Team Member -->
-            <div class="inline-block w-2/3 md:w-auto flex-shrink-0 md:flex-shrink text-center">
-                <img src="https://via.placeholder.com/150" alt="Team Member" class="w-24 h-24 rounded-full mb-4 object-cover shadow-lg mx-auto">
-                <h3 class="text-lg font-bold">FROILAN S. YULAY</h3>
-                <p class="text-gray-600">CHIEF OPERATIONS OFFICER (COO)</p>
-            </div>
-            <!-- Team Member -->
-            <div class="inline-block w-2/3 md:w-auto flex-shrink-0 md:flex-shrink text-center">
-                <img src="https://via.placeholder.com/150" alt="Team Member" class="w-24 h-24 rounded-full mb-4 object-cover shadow-lg mx-auto">
-                <h3 class="text-lg font-bold">CHRISTOPHER ROUCEL A. DALISAY</h3>
-                <p class="text-gray-600">CHIEF EXECUTIVE OFFICER (CEO)</p>
-            </div>
-            <!-- Team Member -->
-            <div class="inline-block w-2/3 md:w-auto flex-shrink-0 md:flex-shrink text-center">
-                <img src="https://via.placeholder.com/150" alt="Team Member" class="w-24 h-24 rounded-full mb-4 object-cover shadow-lg mx-auto">
-                <h3 class="text-lg font-bold">TIMMY G. CABAÑERO</h3>
-                <p class="text-gray-600">CHIEF FINANCIAL OFFICER (CFO)</p>
-            </div>
-            <!-- Add more team members as needed -->
-        </div>
-    </div>
-</div>
-
+                </div> --}}
                 
                 <!-- Footer Section -->
                 <div class="mt-16 flex flex-col md:flex-row justify-center items-center md:items-start space-y-8 md:space-y-0 md:space-x-12">
