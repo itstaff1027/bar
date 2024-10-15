@@ -24,16 +24,19 @@
             <div class="flex flex-col justify-center items-center p-8 h-screen">
                 <!-- Responsive heading text -->
                 <div class="flex flex-col justify-center items-center">
-                    <h1 class="text-6xl sm:text-8xl md:text-[110px] font-bold mb-4 text-white p-4 rounded-md">
+                    <!-- RESERVED. Text -->
+                    <div class="text-6xl sm:text-8xl md:text-[110px] font-bold mb-0 text-white p-4 rounded-md">
                         RESERVED.
-                    </h1>
-                    <div class="flex justify-between w-full">
+                    </div>
+            
+                    <!-- ENTER >>> and By Corte Ibiza - Reduced space between the lines -->
+                    <div class="flex justify-between items-center w-full mt-0">
                         <a class="text-xl sm:text-3xl md:text-[30px] text-white/50" href="{{ route('promoters') }}">ENTER >>></a>
-                        <h2 class="text-xl sm:text-3xl md:text-[30px] text-white/50">By Corte Ibiza</h2>
+                        <h2 class="text-white text-xl sm:text-3xl md:text-[30px]">By Corte Ibiza</h2>
                     </div>
                 </div>
-                
             </div>
+            
         </div>
     </body>
     
